@@ -125,9 +125,11 @@ Original App Design Project - README
 
 ### Digital Wireframes & Mockups
 
+![](https://github.com/FAU-Fall2024-iOS-Mobile-App/final-project-meghane/blob/main/gamevaultwireframe.png)
 
 ### Interactive Prototype
 
+![](https://github.com/FAU-Fall2024-iOS-Mobile-App/final-project-meghane/blob/main/interactiveprototype.gif)
 
 ## Schema 
 
