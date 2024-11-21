@@ -31,19 +31,19 @@ Original App Design Project - README
 
 **Required Must-have Stories**
 
-[X] User can filter games by platform, genre, and other attributes
-[X] User can view a list of games based on their selected filters
-[X] User can see detailed information about a selected game
-[X] User can "favorite" a game for easy access later
-[] User can search for games by title
+- [X] User can filter games by platform, genre, and other attributes
+- [X] User can view a list of games based on their selected filters
+- [X] User can see detailed information about a selected game
+- [X] User can "favorite" a game for easy access later
+- [ ] User can search for games by title
 
 **Optional Nice-to-have Stories**
 
-[X] User can see recommendations based on previous filters and/or searches
-[X] User can see trending games
-[] User can watch trailers for a selected game
-[] User can share game details with others via a share button
-[] User can view and select their recent searches on the search screen
+- [X]  User can see recommendations based on previous filters and/or searches
+- [X]  User can see trending games
+- [ ]  User can watch trailers for a selected game
+- [ ]  User can share game details with others via a share button
+- [ ]  User can view and select their recent searches on the search screen
 
 ### 2. Screen Archetypes
 
