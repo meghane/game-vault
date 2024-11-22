@@ -131,6 +131,10 @@ Original App Design Project - README
 
 ![](https://github.com/FAU-Fall2024-iOS-Mobile-App/final-project-meghane/blob/main/interactiveprototype.gif)
 
+## Build Progress
+
+![](https://github.com/FAU-Fall2024-iOS-Mobile-App/final-project-meghane/blob/main/buildsprint1.gif)
+
 ## Schema 
 
 
