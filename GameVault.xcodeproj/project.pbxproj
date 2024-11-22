@@ -74,6 +74,10 @@
 		0DC9CBC72CF018C5005DCD05 = {
 			isa = PBXGroup;
 			children = (
+				0DC9CC002CF01A0E005DCD05 /* Config */,
+				0DC9CBFF2CF019FC005DCD05 /* Managers */,
+				0DC9CBFE2CF019E0005DCD05 /* Models */,
+				0DC9CBFD2CF01996005DCD05 /* Views */,
 				0DC9CBD22CF018C5005DCD05 /* GameVault */,
 				0DC9CBE32CF018C6005DCD05 /* GameVaultTests */,
 				0DC9CBED2CF018C7005DCD05 /* GameVaultUITests */,
@@ -95,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */,
-				0DC9CBD52CF018C5005DCD05 /* ContentView.swift */,
 				0DC9CBD72CF018C6005DCD05 /* Assets.xcassets */,
 				0DC9CBD92CF018C6005DCD05 /* Preview Content */,
 			);
@@ -125,6 +128,35 @@
 				0DC9CBF02CF018C7005DCD05 /* GameVaultUITestsLaunchTests.swift */,
 			);
 			path = GameVaultUITests;
+			sourceTree = "<group>";
+		};
+		0DC9CBFD2CF01996005DCD05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DC9CBD52CF018C5005DCD05 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0DC9CBFE2CF019E0005DCD05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0DC9CBFF2CF019FC005DCD05 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0DC9CC002CF01A0E005DCD05 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
