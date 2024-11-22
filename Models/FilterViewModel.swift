@@ -27,12 +27,12 @@ class FilterViewModel: ObservableObject {
         isLoading = true
         
         do {
-            // Build API parameters
+            //building the API parameters
             var parameters: [String: String] = [
                 "page_size": "40"
             ]
             
-            // Handle ordering
+            //handling the ordering
             switch ordering {
             case "Name":
                 parameters["ordering"] = "name"
@@ -46,7 +46,7 @@ class FilterViewModel: ObservableObject {
                 parameters["ordering"] = "-rating"
             }
             
-            // Handle ESRB ratings
+            //handle ratings (do not allow inappropriate games on trending or recommended)
             if !ratings.isEmpty {
                 let ratingIds = ratings.compactMap { rating -> String? in
                     switch rating {
@@ -61,7 +61,7 @@ class FilterViewModel: ObservableObject {
                 }
             }
             
-            // Handle platforms (convert names to RAWG platform IDs)
+            //handle platforms (convert names to RAWG platform IDs)
             if !platforms.isEmpty {
                 let platformIds = platforms.compactMap { platform -> String? in
                     switch platform {
@@ -100,13 +100,13 @@ class FilterViewModel: ObservableObject {
                 }
             }
             
-            // Handle genres (convert to RAWG slugs)
+            //handle genres (convert to RAWG slugs)
             if !genres.isEmpty {
                 let genreSlugs = genres.map { $0.lowercased().replacingOccurrences(of: " ", with: "-") }
                 parameters["genres"] = genreSlugs.joined(separator: ",")
             }
             
-            // Handle tags
+            //handle tags
             if !tags.isEmpty {
                 let tagSlugs = tags.map { $0.lowercased().replacingOccurrences(of: " ", with: "-") }
                 parameters["tags"] = tagSlugs.joined(separator: ",")
@@ -117,9 +117,9 @@ class FilterViewModel: ObservableObject {
             let response: GameResponse = try await client.fetch("games", parameters: parameters)
             print("Found \(response.results.count) games") // Debug log
             
-            // Client-side filtering
+            //client-side filtering
             filteredGames = response.results.filter { game in
-                // Only filter by rating
+                //only filter by rating
                 let minRating: Double = switch starRating {
                 case "4.5+ Stars": 4.5
                 case "4+ Stars": 4.0
@@ -136,7 +136,7 @@ class FilterViewModel: ObservableObject {
             if filteredGames.isEmpty {
                 throw GameError.noResults
             }
-            
+            //some debugging
             print("API Response games count: \(response.results.count)")
             print("First few games platforms:")
             for game in response.results.prefix(3) {

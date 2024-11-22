@@ -7,7 +7,9 @@
 
 import Foundation
 
+//filter options
 struct FilterOptions {
+    //genres filter
     static let genres = [
         "Action",
         "Adventure",
@@ -29,7 +31,7 @@ struct FilterOptions {
         "Sports",
         "Strategy"
     ]
-    
+    //platforms filter
     static let platforms = [
         "PC",
         "PlayStation 5",
@@ -42,7 +44,7 @@ struct FilterOptions {
         "macOS",
         "Linux"
     ]
-    
+    //tags filter
     static let tags = [
         "Singleplayer",
         "Multiplayer",
@@ -58,13 +60,13 @@ struct FilterOptions {
         "Cloud Saves",
         "Achievement"
     ]
-    
+    //ratings filter
     static let esrbRatings = [
         "Everyone",
         "Everyone 10+",
         "Teen"
     ]
-    
+    //types filter
     static let gameTypes = [
         "Single-player",
         "Multi-player",
@@ -76,7 +78,7 @@ struct FilterOptions {
         "Local PvP",
         "Split Screen"
     ]
-    
+    //developers filter
     static let developers = [
         "Nintendo",
         "PlayStation Studios",
@@ -91,14 +93,14 @@ struct FilterOptions {
         "Capcom",
         "Bethesda"
     ]
-    
+    //star ratings filter
     static let starRatings = [
         "4.5+ Stars",
         "4+ Stars",
         "3.5+ Stars",
         "3+ Stars"
     ]
-    
+    //ordering filter
     static let ordering = [
         "Name",
         "Release Date",

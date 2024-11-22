@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-
+//view for the filters screen
 struct FilterView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = FilterViewModel()
@@ -31,7 +31,7 @@ struct FilterView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                // Genres Section
+                //genres section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
                         isExpanded: $isGenreExpanded,
@@ -63,7 +63,7 @@ struct FilterView: View {
                 
                 Divider()
                 
-                // Platforms Section
+                //platforms section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
                         isExpanded: $isPlatformExpanded,
@@ -95,7 +95,7 @@ struct FilterView: View {
                 
                 Divider()
                 
-                // Tags Section
+                //tags section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
                         isExpanded: $isTagsExpanded,
@@ -127,7 +127,7 @@ struct FilterView: View {
                 
                 Divider()
                 
-                // ESRB Ratings Section
+                //ESRB ratings section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
                         isExpanded: $isRatingExpanded,
@@ -159,7 +159,7 @@ struct FilterView: View {
                 
                 Divider()
                 
-                // Game Type Section
+                //game type section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
                         isExpanded: $isGameTypeExpanded,
@@ -191,7 +191,7 @@ struct FilterView: View {
                 
                 Divider()
                 
-                // Star Rating Section
+                //star rating section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
                         isExpanded: $isStarRatingExpanded,
@@ -219,7 +219,7 @@ struct FilterView: View {
                 
                 Divider()
                 
-                // Sort By Section
+                //sort by section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
                         isExpanded: $isOrderingExpanded,
@@ -245,7 +245,7 @@ struct FilterView: View {
                     .padding(.horizontal)
                 }
                 
-                // Show Results Button
+                //show results button
                 Button(action: {
                     Task {
                         await viewModel.applyFilters(
@@ -305,7 +305,7 @@ struct FilterView: View {
         }
     }
 }
-
+//checkboxes
 struct CheckboxRow: View {
     let title: String
     let isSelected: Bool
@@ -323,7 +323,7 @@ struct CheckboxRow: View {
         }
     }
 }
-
+//radio buttons
 struct RadioRow: View {
     let title: String
     let isSelected: Bool
