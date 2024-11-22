@@ -11,6 +11,9 @@
 		0D81501D2CF01BD0006A29F6 /* RAWGConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81501C2CF01BD0006A29F6 /* RAWGConfig.swift */; };
 		0D81501F2CF01C04006A29F6 /* RAWGClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81501E2CF01C04006A29F6 /* RAWGClient.swift */; };
 		0D8150212CF01CBD006A29F6 /* ParseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150202CF01CBD006A29F6 /* ParseConfig.swift */; };
+		0D8150232CF01D24006A29F6 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150222CF01D24006A29F6 /* FavoritesManager.swift */; };
+		0D8150252CF01D56006A29F6 /* AuthenticationStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150242CF01D56006A29F6 /* AuthenticationStateManager.swift */; };
+		0D8150282CF01D7E006A29F6 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0D8150272CF01D7E006A29F6 /* ParseSwift */; };
 		0DC9CBD42CF018C5005DCD05 /* GameVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */; };
 		0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD52CF018C5005DCD05 /* ContentView.swift */; };
 		0DC9CBD82CF018C6005DCD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD72CF018C6005DCD05 /* Assets.xcassets */; };
@@ -42,6 +45,8 @@
 		0D81501C2CF01BD0006A29F6 /* RAWGConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAWGConfig.swift; sourceTree = "<group>"; };
 		0D81501E2CF01C04006A29F6 /* RAWGClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAWGClient.swift; sourceTree = "<group>"; };
 		0D8150202CF01CBD006A29F6 /* ParseConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseConfig.swift; sourceTree = "<group>"; };
+		0D8150222CF01D24006A29F6 /* FavoritesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		0D8150242CF01D56006A29F6 /* AuthenticationStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStateManager.swift; sourceTree = "<group>"; };
 		0DC9CBD02CF018C5005DCD05 /* GameVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVaultApp.swift; sourceTree = "<group>"; };
 		0DC9CBD52CF018C5005DCD05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8150282CF01D7E006A29F6 /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +162,8 @@
 		0DC9CBFF2CF019FC005DCD05 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				0D8150242CF01D56006A29F6 /* AuthenticationStateManager.swift */,
+				0D8150222CF01D24006A29F6 /* FavoritesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -187,6 +195,9 @@
 			dependencies = (
 			);
 			name = GameVault;
+			packageProductDependencies = (
+				0D8150272CF01D7E006A29F6 /* ParseSwift */,
+			);
 			productName = GameVault;
 			productReference = 0DC9CBD02CF018C5005DCD05 /* GameVault.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 0DC9CBC72CF018C5005DCD05;
+			packageReferences = (
+				0D8150262CF01D7E006A29F6 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+			);
 			productRefGroup = 0DC9CBD12CF018C5005DCD05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,8 +318,10 @@
 				0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */,
 				0D81501B2CF01BA1006A29F6 /* RAWGError.swift in Sources */,
 				0D81501D2CF01BD0006A29F6 /* RAWGConfig.swift in Sources */,
+				0D8150232CF01D24006A29F6 /* FavoritesManager.swift in Sources */,
 				0D8150212CF01CBD006A29F6 /* ParseConfig.swift in Sources */,
 				0D81501F2CF01C04006A29F6 /* RAWGClient.swift in Sources */,
+				0D8150252CF01D56006A29F6 /* AuthenticationStateManager.swift in Sources */,
 				0DC9CBD42CF018C5005DCD05 /* GameVaultApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,6 +652,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0D8150262CF01D7E006A29F6 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.14.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0D8150272CF01D7E006A29F6 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D8150262CF01D7E006A29F6 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DC9CBC82CF018C5005DCD05 /* Project object */;
 }
