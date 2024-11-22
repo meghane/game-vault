@@ -83,8 +83,9 @@ struct GameCard_Previews: PreviewProvider {
             GameCard(game: Game(
                 id: 1,
                 name: "Sample Game",
-                released: "2023-01-01",
+                released: "01-01-2023",
                 backgroundImage: nil,
+                rating: 0.0,
                 metacritic: 85,
                 platforms: [
                     PlatformContainer(platform: Platform(id: 1, name: "PC", slug: "pc"))
