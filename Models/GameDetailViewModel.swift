@@ -1,5 +1,5 @@
 //
-//  FavoriteGameViewModel.swift
+//  GameDetailViewModel.swift
 //  GameVault
 //
 //  Created by meghan on 11/21/24.
@@ -7,25 +7,26 @@
 
 import SwiftUI
 
-//defined the viewmodel
+//more fixes
 @MainActor
-class FavoriteGameViewModel: ObservableObject {
+class GameDetailViewModel: ObservableObject {
     @Published var gameDetails: GameDetails?
     @Published var isLoading = false
-    @Published var error: Error?
+    @Published var error: RAWGError?
     
     private let client = RAWGClient.shared
     
-    //fetcching game details
-    func fetchGameDetails(gameId: String) async {
+    func fetchGameDetails(gameId: Int) async {
         isLoading = true
         
         do {
             gameDetails = try await client.fetch("games/\(gameId)")
-            isLoading = false
-        } catch {
+        } catch let error as RAWGError {
             self.error = error
-            isLoading = false
+        } catch {
+            self.error = .networkError(error)
         }
+        
+        isLoading = false
     }
 }
