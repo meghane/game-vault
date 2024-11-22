@@ -31,6 +31,7 @@
 		0D8150462CF02D3E006A29F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150452CF02D3E006A29F6 /* HomeView.swift */; };
 		0D8150482CF0303F006A29F6 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150472CF0303F006A29F6 /* LaunchScreen.swift */; };
 		0D81504A2CF030F2006A29F6 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150492CF030F1006A29F6 /* MainTabView.swift */; };
+		0D81504C2CF03296006A29F6 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81504B2CF03296006A29F6 /* RegistrationView.swift */; };
 		0DC9CBD42CF018C5005DCD05 /* GameVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */; };
 		0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD52CF018C5005DCD05 /* ContentView.swift */; };
 		0DC9CBD82CF018C6005DCD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD72CF018C6005DCD05 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		0D8150452CF02D3E006A29F6 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0D8150472CF0303F006A29F6 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		0D8150492CF030F1006A29F6 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		0D81504B2CF03296006A29F6 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		0DC9CBD02CF018C5005DCD05 /* GameVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVaultApp.swift; sourceTree = "<group>"; };
 		0DC9CBD52CF018C5005DCD05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				0D8150452CF02D3E006A29F6 /* HomeView.swift */,
 				0D8150472CF0303F006A29F6 /* LaunchScreen.swift */,
 				0D8150492CF030F1006A29F6 /* MainTabView.swift */,
+				0D81504B2CF03296006A29F6 /* RegistrationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				0D81502E2CF02140006A29F6 /* FilterOptions.swift in Sources */,
 				0D8150442CF02D36006A29F6 /* HomeViewModel.swift in Sources */,
 				0D81502C2CF01FA6006A29F6 /* FavoritesView.swift in Sources */,
+				0D81504C2CF03296006A29F6 /* RegistrationView.swift in Sources */,
 				0D81503C2CF02787006A29F6 /* GameImageView.swift in Sources */,
 				0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */,
 				0D8150322CF02150006A29F6 /* FilterViewModel.swift in Sources */,
