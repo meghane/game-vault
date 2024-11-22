@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D81501B2CF01BA1006A29F6 /* RAWGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81501A2CF01BA1006A29F6 /* RAWGError.swift */; };
+		0D81501D2CF01BD0006A29F6 /* RAWGConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81501C2CF01BD0006A29F6 /* RAWGConfig.swift */; };
+		0D81501F2CF01C04006A29F6 /* RAWGClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81501E2CF01C04006A29F6 /* RAWGClient.swift */; };
+		0D8150212CF01CBD006A29F6 /* ParseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150202CF01CBD006A29F6 /* ParseConfig.swift */; };
 		0DC9CBD42CF018C5005DCD05 /* GameVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */; };
 		0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD52CF018C5005DCD05 /* ContentView.swift */; };
 		0DC9CBD82CF018C6005DCD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD72CF018C6005DCD05 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D81501A2CF01BA1006A29F6 /* RAWGError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWGError.swift; sourceTree = "<group>"; };
+		0D81501C2CF01BD0006A29F6 /* RAWGConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAWGConfig.swift; sourceTree = "<group>"; };
+		0D81501E2CF01C04006A29F6 /* RAWGClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAWGClient.swift; sourceTree = "<group>"; };
+		0D8150202CF01CBD006A29F6 /* ParseConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseConfig.swift; sourceTree = "<group>"; };
 		0DC9CBD02CF018C5005DCD05 /* GameVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVaultApp.swift; sourceTree = "<group>"; };
 		0DC9CBD52CF018C5005DCD05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +163,10 @@
 		0DC9CC002CF01A0E005DCD05 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				0D8150202CF01CBD006A29F6 /* ParseConfig.swift */,
+				0D81501E2CF01C04006A29F6 /* RAWGClient.swift */,
+				0D81501C2CF01BD0006A29F6 /* RAWGConfig.swift */,
+				0D81501A2CF01BA1006A29F6 /* RAWGError.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -290,6 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */,
+				0D81501B2CF01BA1006A29F6 /* RAWGError.swift in Sources */,
+				0D81501D2CF01BD0006A29F6 /* RAWGConfig.swift in Sources */,
+				0D8150212CF01CBD006A29F6 /* ParseConfig.swift in Sources */,
+				0D81501F2CF01C04006A29F6 /* RAWGClient.swift in Sources */,
 				0DC9CBD42CF018C5005DCD05 /* GameVaultApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
