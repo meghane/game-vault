@@ -27,6 +27,8 @@
 		0D81503E2CF02791006A29F6 /* GameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81503D2CF02791006A29F6 /* GameStore.swift */; };
 		0D8150402CF02797006A29F6 /* GameVaultUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81503F2CF02797006A29F6 /* GameVaultUser.swift */; };
 		0D8150422CF0279B006A29F6 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150412CF0279B006A29F6 /* GameView.swift */; };
+		0D8150442CF02D36006A29F6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150432CF02D36006A29F6 /* HomeViewModel.swift */; };
+		0D8150462CF02D3E006A29F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8150452CF02D3E006A29F6 /* HomeView.swift */; };
 		0DC9CBD42CF018C5005DCD05 /* GameVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */; };
 		0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD52CF018C5005DCD05 /* ContentView.swift */; };
 		0DC9CBD82CF018C6005DCD05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC9CBD72CF018C6005DCD05 /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		0D81503D2CF02791006A29F6 /* GameStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStore.swift; sourceTree = "<group>"; };
 		0D81503F2CF02797006A29F6 /* GameVaultUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVaultUser.swift; sourceTree = "<group>"; };
 		0D8150412CF0279B006A29F6 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		0D8150432CF02D36006A29F6 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0D8150452CF02D3E006A29F6 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0DC9CBD02CF018C5005DCD05 /* GameVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC9CBD32CF018C5005DCD05 /* GameVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVaultApp.swift; sourceTree = "<group>"; };
 		0DC9CBD52CF018C5005DCD05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				0D8150372CF0277A006A29F6 /* GameDetailView.swift */,
 				0D81503B2CF02787006A29F6 /* GameImageView.swift */,
 				0D8150412CF0279B006A29F6 /* GameView.swift */,
+				0D8150452CF02D3E006A29F6 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				0D8150392CF0277D006A29F6 /* GameDetailViewModel.swift */,
 				0D81503D2CF02791006A29F6 /* GameStore.swift */,
 				0D81503F2CF02797006A29F6 /* GameVaultUser.swift */,
+				0D8150432CF02D36006A29F6 /* HomeViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D81502E2CF02140006A29F6 /* FilterOptions.swift in Sources */,
+				0D8150442CF02D36006A29F6 /* HomeViewModel.swift in Sources */,
 				0D81502C2CF01FA6006A29F6 /* FavoritesView.swift in Sources */,
 				0D81503C2CF02787006A29F6 /* GameImageView.swift in Sources */,
 				0DC9CBD62CF018C5005DCD05 /* ContentView.swift in Sources */,
@@ -374,6 +381,7 @@
 				0D81503E2CF02791006A29F6 /* GameStore.swift in Sources */,
 				0D81501F2CF01C04006A29F6 /* RAWGClient.swift in Sources */,
 				0D8150252CF01D56006A29F6 /* AuthenticationStateManager.swift in Sources */,
+				0D8150462CF02D3E006A29F6 /* HomeView.swift in Sources */,
 				0DC9CBD42CF018C5005DCD05 /* GameVaultApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
