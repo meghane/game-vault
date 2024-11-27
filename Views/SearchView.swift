@@ -15,7 +15,7 @@ struct SearchView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 16) {
-                //search bar with filter
+                // Search bar with filter
                 HStack(spacing: 12) {
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -24,9 +24,13 @@ struct SearchView: View {
                             .textFieldStyle(PlainTextFieldStyle())
                             .onChange(of: searchText) { oldValue, newValue in
                                 Task {
+                                    // Add delay to avoid too many API calls
+                                    try? await Task.sleep(nanoseconds: 500_000_000)
                                     await viewModel.searchGames(query: newValue)
                                 }
                             }
+                            .autocorrectionDisabled()
+                            .submitLabel(.search)
                     }
                     .padding()
                     .background(
@@ -44,28 +48,45 @@ struct SearchView: View {
                 }
                 .padding(.horizontal)
                 
-                //content area
+                // Content area
                 ScrollView {
                     if searchText.isEmpty {
-                        Text("Search for games...")
-                            .foregroundColor(.gray)
-                            .padding()
+                        VStack {
+                            Image(systemName: "magnifyingglass")
+                                .font(.system(size: 50))
+                                .foregroundColor(.gray)
+                                .padding()
+                            Text("Search for games...")
+                                .foregroundColor(.gray)
+                        }
+                        .padding(.top, 100)
                     } else if viewModel.isLoading {
                         ProgressView()
-                            .padding()
+                            .padding(.top, 100)
                     } else if let error = viewModel.error {
                         VStack(spacing: 8) {
+                            Image(systemName: "exclamationmark.triangle")
+                                .font(.system(size: 40))
+                                .foregroundColor(.red)
+                                .padding()
                             Text("Error searching games")
                                 .font(.headline)
                             Text(error.localizedDescription)
                                 .font(.subheadline)
                                 .foregroundColor(.red)
+                                .multilineTextAlignment(.center)
                         }
-                        .padding()
+                        .padding(.top, 100)
                     } else if viewModel.searchResults.isEmpty {
-                        Text("No games found")
-                            .foregroundColor(.gray)
-                            .padding()
+                        VStack {
+                            Image(systemName: "magnifyingglass.circle")
+                                .font(.system(size: 50))
+                                .foregroundColor(.gray)
+                                .padding()
+                            Text("No games found")
+                                .foregroundColor(.gray)
+                        }
+                        .padding(.top, 100)
                     } else {
                         LazyVStack(spacing: 16) {
                             ForEach(viewModel.searchResults) { game in

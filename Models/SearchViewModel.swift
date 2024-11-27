@@ -22,13 +22,31 @@ class SearchViewModel: ObservableObject {
         }
         
         isLoading = true
+        error = nil
         
         do {
-            let parameters = ["search": query, "page_size": "20"]
+            let parameters = [
+                "search": query.trimmingCharacters(in: .whitespacesAndNewlines),
+                "page_size": "20",
+                "search_precise": "true",
+                "exclude_additions": "true",
+                "exclude_tags": "sexual-content,nudity,nsfw",
+                "ordering": "-relevance,-rating",
+                "key": "4286de6535b0405c8a5d648c35b6ddee"
+            ]
+            
             let response: GameResponse = try await client.fetch("games", parameters: parameters)
+            
+            guard !response.results.isEmpty else {
+                searchResults = []
+                return
+            }
+            
             searchResults = response.results
+        } catch let error as GameError {
+            self.error = error
         } catch {
-            self.error = error as? GameError ?? .networkError(error.localizedDescription)
+            self.error = .networkError("Failed to load search results. Please try again.")
         }
         
         isLoading = false
