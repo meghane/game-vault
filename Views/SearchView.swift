@@ -15,7 +15,7 @@ struct SearchView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 16) {
-                // Search bar with filter
+                //search bar with filter
                 HStack(spacing: 12) {
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -48,7 +48,7 @@ struct SearchView: View {
                 }
                 .padding(.horizontal)
                 
-                // Content area
+                //content area
                 ScrollView {
                     if searchText.isEmpty {
                         VStack {

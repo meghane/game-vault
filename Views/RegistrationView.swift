@@ -24,14 +24,14 @@ struct RegistrationView: View {
     var body: some View {
         ZStack {
             
-            // Main content
+            //main content
             VStack(alignment: .leading, spacing: 20) {
                 Text("Create Account")
                     .font(.system(size: 32, weight: .bold))
                     .padding(.top, 60)
                 
                 VStack(alignment: .leading, spacing: 20) {
-                    // First Name
+                    //first name
                     VStack(alignment: .leading, spacing: 8) {
                         Text("First Name")
                             .font(.system(size: 16))
@@ -40,7 +40,7 @@ struct RegistrationView: View {
                             .autocorrectionDisabled()
                     }
                     
-                    // Last Name
+                    //last name
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Last Name")
                             .font(.system(size: 16))
@@ -49,7 +49,7 @@ struct RegistrationView: View {
                             .autocorrectionDisabled()
                     }
                     
-                    // Email
+                    //email
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Email")
                             .font(.system(size: 16))
@@ -60,7 +60,7 @@ struct RegistrationView: View {
                             .keyboardType(.emailAddress)
                     }
                     
-                    // Password
+                    //password
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Password")
                             .font(.system(size: 16))
@@ -68,7 +68,7 @@ struct RegistrationView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     
-                    // Confirm Password
+                    //confirm Password
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Confirm Password")
                             .font(.system(size: 16))

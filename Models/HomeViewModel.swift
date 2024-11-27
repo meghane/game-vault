@@ -20,7 +20,7 @@ class HomeViewModel: ObservableObject {
     func fetchGames() async {
         isLoading = true
         do {
-            // Fetch trending games
+            //fetch trending games
             let trendingParameters = [
                 "page_size": "20",
                 "ordering": "-rating",
@@ -34,7 +34,7 @@ class HomeViewModel: ObservableObject {
             let trendingResponse: GameResponse = try await client.fetch("games", parameters: trendingParameters)
             self.trendingGames = trendingResponse.results
             
-            // Fetch recommended games with different parameters
+            //fetch recommended games with different parameters
             let recommendedParameters = [
                 "page_size": "20",
                 "ordering": "-metacritic", // Different ordering

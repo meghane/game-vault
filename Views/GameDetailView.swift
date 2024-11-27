@@ -17,7 +17,7 @@ struct GameDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                // Header Image with Trailer Button
+                //header image with trailer button
                 if let backgroundImage = viewModel.gameDetails?.backgroundImage {
                     ZStack {
                         GameImageView(url: backgroundImage, width: UIScreen.main.bounds.width - 32, height: 200)
@@ -35,7 +35,7 @@ struct GameDetailView: View {
                     }
                 }
                 
-                // Title and Rating
+                //title and rating
                 VStack(alignment: .leading, spacing: 8) {
                     Text(viewModel.gameDetails?.name ?? "Loading...")
                         .font(.title2)
@@ -51,7 +51,7 @@ struct GameDetailView: View {
                     }
                 }
                 
-                // Release Date
+                //release date
                 if let released = viewModel.gameDetails?.released {
                     HStack {
                         Image(systemName: "calendar")
@@ -61,7 +61,7 @@ struct GameDetailView: View {
                     }
                 }
                 
-                // Platforms
+                //platforms
                 if let platforms = viewModel.gameDetails?.platforms {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Available on:")
@@ -73,7 +73,7 @@ struct GameDetailView: View {
                     }
                 }
                 
-                // Description
+                //description
                 if let description = viewModel.gameDetails?.description {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("About")
@@ -83,7 +83,7 @@ struct GameDetailView: View {
                     }
                 }
                 
-                // Developers
+                //developers
                 if let developers = viewModel.gameDetails?.developers {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Developers")
@@ -95,7 +95,7 @@ struct GameDetailView: View {
                     }
                 }
                 
-                // Website Link
+                //website link
                 if let website = viewModel.gameDetails?.website,
                    let url = URL(string: website) {
                     Link(destination: url) {

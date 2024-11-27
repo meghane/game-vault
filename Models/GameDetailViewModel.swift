@@ -36,7 +36,7 @@ class GameDetailViewModel: ObservableObject {
     }
 }
 
-// Add these structures for trailer data
+//add these structures for trailer data
 struct MovieResponse: Codable {
     let results: [MovieResult]
 }
@@ -46,5 +46,5 @@ struct MovieResult: Codable {
 }
 
 struct MovieData: Codable {
-    let max: String // URL for the video
+    let max: String //URL for the video
 }
