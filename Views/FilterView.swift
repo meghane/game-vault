@@ -35,6 +35,8 @@ struct FilterView: View {
                 Text("Filter")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
                     .padding(.top, 20)
                     .padding(.bottom, 10)
                 
