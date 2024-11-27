@@ -34,7 +34,7 @@ struct HomeView: View {
                         } else {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 16) {
-                                    ForEach(viewModel.games) { game in
+                                    ForEach(viewModel.trendingGames) { game in
                                         GameCard(game: game) {
                                             selectedGameId = game.id
                                         }
@@ -58,7 +58,7 @@ struct HomeView: View {
                         } else {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 16) {
-                                    ForEach(viewModel.games) { game in
+                                    ForEach(viewModel.recommendedGames) { game in
                                         GameCard(game: game) {
                                             selectedGameId = game.id
                                         }
@@ -71,8 +71,15 @@ struct HomeView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .task {
+            .refreshable {
                 await viewModel.fetchGames()
+            }
+            .onAppear {
+                if viewModel.trendingGames.isEmpty && viewModel.recommendedGames.isEmpty {
+                    Task {
+                        await viewModel.fetchGames()
+                    }
+                }
             }
             .navigationDestination(isPresented: Binding(
                 get: { selectedGameId != nil },
