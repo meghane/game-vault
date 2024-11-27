@@ -9,29 +9,27 @@ import Foundation
 import ParseSwift
 
 struct GameVaultUser: ParseUser {
-    // These are required by ParseObject
+    //required by ParseObject
     var objectId: String?
     var createdAt: Date?
     var updatedAt: Date?
     var ACL: ParseACL?
     var originalData: Data?
     
-    // These are required by ParseUser
+    //required by ParseUser
     var username: String?
     var email: String?
     var emailVerified: Bool?
     var password: String?
     var authData: [String: [String: String]?]?
     
-    // Custom fields
     var firstName: String?
     var lastName: String?
 
-    // Required by ParseObject
+    //required by ParseObject
     init() { }
 }
 
-// MARK: - ParseUser Requirements
 extension GameVaultUser {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -49,7 +47,6 @@ extension GameVaultUser {
     }
 }
 
-// MARK: - Encodable Conformance
 extension GameVaultUser: Encodable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -67,7 +64,6 @@ extension GameVaultUser: Encodable {
     }
 }
 
-// MARK: - Equatable Conformance
 extension GameVaultUser: Equatable {
     static func == (lhs: GameVaultUser, rhs: GameVaultUser) -> Bool {
         return lhs.objectId == rhs.objectId &&
@@ -81,7 +77,6 @@ extension GameVaultUser: Equatable {
     }
 }
 
-// MARK: - CodingKeys
 extension GameVaultUser {
     enum CodingKeys: String, CodingKey {
         case objectId

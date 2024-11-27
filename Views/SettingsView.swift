@@ -49,11 +49,11 @@ struct ProfileView: View {
             if let currentUser = GameVaultUser.current {
                 Section {
                     HStack {
-                        Text("Username")
+                        Text("Name")
                         Spacer()
-                        Text(currentUser.username ?? "")
+                        Text("\(currentUser.firstName ?? "") \(currentUser.lastName ?? "")")
                             .foregroundColor(.gray)
-                    }
+                                        }
                     
                     HStack {
                         Text("Email")
@@ -101,7 +101,7 @@ struct AboutView: View {
                     Text("Version 1.0")
                         .foregroundColor(.gray)
                     
-                    Text("GameVault is your personal game collection manager and discovery tool.")
+                    Text("The Game Vault is a mobile app designed for gamers on all platforms, helping them find their next gaming obsession. With robust filters for genres, platforms, game types, and more, users can locate and discover video games that are specific to their interests. Regardless of your preference for fantasy RPGs, relaxing simulations, or action-packed survival games, The Game Vault streamlines the search process and introduces you to games you’ll love.")
                         .padding(.top, 8)
                 }
                 .padding(.vertical, 8)
