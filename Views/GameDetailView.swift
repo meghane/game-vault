@@ -6,18 +6,33 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct GameDetailView: View {
     let gameId: Int
     @StateObject private var viewModel = GameDetailViewModel()
     @EnvironmentObject var favoritesManager: FavoritesManager
+    @State private var showTrailer = false
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                // Header Image
+                // Header Image with Trailer Button
                 if let backgroundImage = viewModel.gameDetails?.backgroundImage {
-                    GameImageView(url: backgroundImage, width: UIScreen.main.bounds.width - 32, height: 200)
+                    ZStack {
+                        GameImageView(url: backgroundImage, width: UIScreen.main.bounds.width - 32, height: 200)
+                        
+                        if viewModel.trailerUrl != nil {
+                            Button(action: {
+                                showTrailer = true
+                            }) {
+                                Image(systemName: "play.circle.fill")
+                                    .font(.system(size: 50))
+                                    .foregroundColor(.white)
+                                    .shadow(radius: 5)
+                            }
+                        }
+                    }
                 }
                 
                 // Title and Rating
@@ -107,6 +122,12 @@ struct GameDetailView: View {
                 }
             }
         }
+        .sheet(isPresented: $showTrailer) {
+            if let trailerUrl = viewModel.trailerUrl,
+               let url = URL(string: trailerUrl) {
+                TrailerView(trailerUrl: url)
+            }
+        }
         .task {
             await viewModel.fetchGameDetails(gameId: gameId)
         }
@@ -123,6 +144,27 @@ struct GameDetailView: View {
             if let error = viewModel.error {
                 Text(error.localizedDescription)
             }
+        }
+    }
+}
+
+// Add this new view for the trailer
+struct TrailerView: View {
+    let trailerUrl: URL
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        NavigationStack {
+            VideoPlayer(player: AVPlayer(url: trailerUrl))
+                .ignoresSafeArea()
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Done") {
+                            dismiss()
+                        }
+                    }
+                }
         }
     }
 }

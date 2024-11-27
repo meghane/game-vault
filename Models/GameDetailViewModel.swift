@@ -13,6 +13,7 @@ class GameDetailViewModel: ObservableObject {
     @Published var gameDetails: GameDetails?
     @Published var isLoading = false
     @Published var error: RAWGError?
+    @Published var trailerUrl: String?
     
     private let client = RAWGClient.shared
     
@@ -21,6 +22,10 @@ class GameDetailViewModel: ObservableObject {
         
         do {
             gameDetails = try await client.fetch("games/\(gameId)")
+            // Fetch trailer if available
+            if let movieData: MovieResponse = try? await client.fetch("games/\(gameId)/movies") {
+                trailerUrl = movieData.results.first?.data.max
+            }
         } catch let error as RAWGError {
             self.error = error
         } catch {
@@ -29,4 +34,17 @@ class GameDetailViewModel: ObservableObject {
         
         isLoading = false
     }
+}
+
+// Add these structures for trailer data
+struct MovieResponse: Codable {
+    let results: [MovieResult]
+}
+
+struct MovieResult: Codable {
+    let data: MovieData
+}
+
+struct MovieData: Codable {
+    let max: String // URL for the video
 }
