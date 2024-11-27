@@ -43,13 +43,13 @@ struct LaunchScreen: View {
                 VStack(spacing: 20) {
                     Spacer()
                     
-                    //logo placeholder
+                    //logo
                     VStack(spacing: 8) {
-                        Text("GAME VAULT")
-                            .font(.system(size: 32, weight: .bold))
+                        Image("AppLogo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
                     }
-                    
-                    Spacer()
                     
                     //buttons
                     VStack(spacing: 16) {
