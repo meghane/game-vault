@@ -31,7 +31,13 @@ struct FilterView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 0) {
+            VStack(spacing: 16) {
+                Text("Filter")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.top, 20)
+                    .padding(.bottom, 10)
+                
                 //genres section
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup(
@@ -63,6 +69,7 @@ struct FilterView: View {
                 }
                 
                 Divider()
+                    .padding(.vertical, 8)
                 
                 //platforms section
                 VStack(alignment: .leading, spacing: 12) {
@@ -95,6 +102,7 @@ struct FilterView: View {
                 }
                 
                 Divider()
+                    .padding(.vertical, 8)
                 
                 //tags section
                 VStack(alignment: .leading, spacing: 12) {
@@ -127,6 +135,7 @@ struct FilterView: View {
                 }
                 
                 Divider()
+                    .padding(.vertical, 8)
                 
                 //ESRB ratings section
                 VStack(alignment: .leading, spacing: 12) {
@@ -159,6 +168,7 @@ struct FilterView: View {
                 }
                 
                 Divider()
+                    .padding(.vertical, 8)
                 
                 //game type section
                 VStack(alignment: .leading, spacing: 12) {
@@ -191,6 +201,7 @@ struct FilterView: View {
                 }
                 
                 Divider()
+                    .padding(.vertical, 8)
                 
                 //star rating section
                 VStack(alignment: .leading, spacing: 12) {
@@ -219,6 +230,7 @@ struct FilterView: View {
                 }
                 
                 Divider()
+                    .padding(.vertical, 8)
                 
                 //sort by section
                 VStack(alignment: .leading, spacing: 12) {
@@ -275,11 +287,11 @@ struct FilterView: View {
                 .background(Color.black)
                 .cornerRadius(8)
                 .padding()
-                .padding(.top, 20)
+                .padding(.top, 24)
                 .disabled(viewModel.isLoading)
             }
+            .padding(.vertical)
         }
-        .navigationTitle("Filter")
         .overlay {
             if viewModel.isLoading {
                 Color.black.opacity(0.3)
@@ -342,4 +354,5 @@ struct RadioRow: View {
         }
     }
 }
+
 

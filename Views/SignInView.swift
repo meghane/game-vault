@@ -18,26 +18,6 @@ struct SignInView: View {
     
     var body: some View {
         ZStack {
-            //background circles
-            Circle()
-                .fill(.black)
-                .frame(width: 100)
-                .position(x: -20, y: -20)
-            
-            Circle()
-                .fill(.black)
-                .frame(width: 50)
-                .position(x: UIScreen.main.bounds.width - 30, y: 40)
-            
-            Circle()
-                .fill(.black)
-                .frame(width: 100)
-                .position(x: -20, y: UIScreen.main.bounds.height - 20)
-            
-            Circle()
-                .fill(.black)
-                .frame(width: 100)
-                .position(x: UIScreen.main.bounds.width - 20, y: UIScreen.main.bounds.height - 20)
             
             //main content
             VStack(alignment: .leading, spacing: 20) {

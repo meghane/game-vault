@@ -19,7 +19,7 @@ struct SettingsView: View {
                 Section("Profile") {
                     NavigationLink(destination: ProfileView()) {
                         HStack {
-                            Text("View username and email")
+                            Text("View name and email")
                             Spacer()
                         }
                     }
