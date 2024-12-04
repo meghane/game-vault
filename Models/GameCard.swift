@@ -39,7 +39,7 @@ struct GameCard: View {
                     }
                 }
                 .padding(.horizontal, 8)
-                .padding(.bottom, 8)
+                .padding(.bottom, 16)
             }
             .frame(width: 150)
             .background(Color(.systemBackground))

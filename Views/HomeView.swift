@@ -38,9 +38,11 @@ struct HomeView: View {
                                         GameCard(game: game) {
                                             selectedGameId = game.id
                                         }
+                                        .frame(width: 150, height: 220)
                                     }
                                 }
                                 .padding(.horizontal)
+                                .padding(.bottom, 16)
                             }
                         }
                     }
@@ -62,12 +64,17 @@ struct HomeView: View {
                                         GameCard(game: game) {
                                             selectedGameId = game.id
                                         }
+                                        .frame(width: 150, height: 220)
+                                        .padding(.bottom, 16)
                                     }
                                 }
                                 .padding(.horizontal)
+                                .padding(.bottom, 16)
+
                             }
                         }
                     }
+                    .padding(.top, 20)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -101,6 +108,7 @@ struct GameCardContent: View {
         VStack(alignment: .leading, spacing: 8) {
             //game image
             GameImageView(url: game.backgroundImage, width: 150, height: 150)
+                .frame(width: 150, height: 150)
             
             //game info
             VStack(alignment: .leading, spacing: 4) {
@@ -126,9 +134,10 @@ struct GameCardContent: View {
             .padding(.horizontal, 8)
             .padding(.bottom, 8)
         }
-        .frame(width: 150)
+        .frame(width: 150, height: 220)
         .background(Color(.systemBackground))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+        .padding(.bottom, 16) // Add bottom padding to prevent cutoff
     }
 }
