@@ -102,11 +102,11 @@ struct GameDetailView: View {
                         Button {
                             favoritesManager.toggleFavorite(gameId: String(gameId))
                         } label: {
-                            Image(systemName: favoritesManager.isFavorite(gameId: String(gameId)) ? "star.fill" : "star")
-                                .foregroundColor(favoritesManager.isFavorite(gameId: String(gameId)) ? .yellow : .gray)
+                            Image(systemName: favoritesManager.isFavorite(gameId: String(gameId)) ? "bookmark.fill" : "bookmark")
+                                .foregroundColor(favoritesManager.isFavorite(gameId: String(gameId)) ? .black : .black)
                         }
                         
-                        // Share button
+                        //share button
                         Button(action: {
                             shareGameInfo()
                         }) {
@@ -147,7 +147,7 @@ struct GameDetailView: View {
         
         let activityVC = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
         
-        // Present the activity view controller
+        //present the activity view controller
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootViewController = windowScene.windows.first?.rootViewController {
             rootViewController.present(activityVC, animated: true, completion: nil)

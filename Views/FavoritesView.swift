@@ -16,9 +16,9 @@ struct FavoritesView: View {
             ScrollView {
                 if favoritesManager.favoriteGames.isEmpty {
                     VStack(spacing: 20) {
-                        Image(systemName: "star")
+                        Image(systemName: "bookmark")
                             .font(.system(size: 50))
-                            .foregroundColor(.gray)
+                            .foregroundColor(.black)
                         Text("No favorites yet")
                             .font(.headline)
                             .foregroundColor(.gray)
@@ -48,10 +48,10 @@ struct FavoriteGameCard: View {
     var body: some View {
         NavigationLink(destination: GameDetailView(gameId: Int(gameId) ?? 0)) {
             HStack(spacing: 16) {
-                // Game Image
+                //game image
                 GameImageView(url: viewModel.gameDetails?.backgroundImage, width: 80, height: 80)
                 
-                // Game Info
+                //game info
                 VStack(alignment: .leading, spacing: 4) {
                     if let name = viewModel.gameDetails?.name {
                         Text(name)
@@ -77,12 +77,12 @@ struct FavoriteGameCard: View {
                 
                 Spacer()
                 
-                // Favorite Button
+                //favorite
                 Button(action: {
                     favoritesManager.toggleFavorite(gameId: gameId)
                 }) {
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
+                    Image(systemName: "bookmark.fill")
+                        .foregroundColor(.black)
                 }
             }
             .padding()
