@@ -129,7 +129,7 @@ struct RegistrationView: View {
         } message: {
             Text(errorMessage)
         }
-        .onChange(of: authStateManager.authState) { newState in
+        .onChange(of: authStateManager.authState) { oldState, newState in
             if newState == .authenticated {
                 navigateToHome = true
             }
@@ -170,11 +170,13 @@ struct RegistrationView: View {
                 
                 await MainActor.run {
                     authStateManager.authState = .authenticated
-                    let window = UIApplication.shared.windows.first
-                    window?.rootViewController = UIHostingController(rootView:
-                        MainTabView()
-                            .environmentObject(authStateManager)
-                    )
+                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                       let window = windowScene.windows.first {
+                        window.rootViewController = UIHostingController(rootView:
+                            MainTabView()
+                                .environmentObject(authStateManager)
+                        )
+                    }
                 }
             } catch {
                 await MainActor.run {

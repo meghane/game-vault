@@ -22,7 +22,7 @@ class AuthenticationStateManager: ObservableObject {
     
     init() {
         //checks to see if the user is alreading logged in
-        if let user = try? User.current {
+        if let user = User.current {
             self.currentUser = user
             self.isAuthenticated = true
             self.authState = .authenticated

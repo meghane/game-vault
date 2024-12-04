@@ -141,7 +141,7 @@ struct GameDetailView: View {
         
         let shareText = """
         Check out this game: \(gameDetails.name)
-        Rating: \(String(format: "%.1f", gameDetails.rating ?? 0))
+        Rating: \(String(format: "%.1f", gameDetails.rating))
         Description: \(gameDetails.description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil))
         """
         
