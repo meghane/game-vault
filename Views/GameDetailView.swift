@@ -1,3 +1,10 @@
+//
+//  FilterView.swift
+//  GameVault
+//
+//  Created by meghan on 11/20/24.
+//
+
 import SwiftUI
 
 struct GameDetailView: View {
@@ -91,11 +98,21 @@ struct GameDetailView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 if let gameId = viewModel.gameDetails?.id {
-                    Button {
-                        favoritesManager.toggleFavorite(gameId: String(gameId))
-                    } label: {
-                        Image(systemName: favoritesManager.isFavorite(gameId: String(gameId)) ? "star.fill" : "star")
-                            .foregroundColor(favoritesManager.isFavorite(gameId: String(gameId)) ? .yellow : .gray)
+                    HStack {
+                        Button {
+                            favoritesManager.toggleFavorite(gameId: String(gameId))
+                        } label: {
+                            Image(systemName: favoritesManager.isFavorite(gameId: String(gameId)) ? "star.fill" : "star")
+                                .foregroundColor(favoritesManager.isFavorite(gameId: String(gameId)) ? .yellow : .gray)
+                        }
+                        
+                        // Share button
+                        Button(action: {
+                            shareGameInfo()
+                        }) {
+                            Image(systemName: "square.and.arrow.up")
+                                .foregroundColor(.black)
+                        }
                     }
                 }
             }
@@ -118,5 +135,22 @@ struct GameDetailView: View {
             }
         }
     }
+    
+    private func shareGameInfo() {
+        guard let gameDetails = viewModel.gameDetails else { return }
+        
+        let shareText = """
+        Check out this game: \(gameDetails.name)
+        Rating: \(String(format: "%.1f", gameDetails.rating ?? 0))
+        Description: \(gameDetails.description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil))
+        """
+        
+        let activityVC = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+        
+        // Present the activity view controller
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(activityVC, animated: true, completion: nil)
+        }
+    }
 }
-
