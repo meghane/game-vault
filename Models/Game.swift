@@ -133,7 +133,7 @@ extension Game {
         Game(
             id: 1,
             name: "Sample Game",
-            released: "2023-01-01",
+            released: "01-01-2023",
             backgroundImage: nil,
             rating: 4.5,
             metacritic: 85,
@@ -150,7 +150,7 @@ extension GameDetails {
             id: 1,
             name: "Sample Game",
             description: "This is a sample game description.",
-            released: "2023-01-01",
+            released: "01-01-2023",
             backgroundImage: nil,
             website: "https://example.com",
             rating: 4.5,

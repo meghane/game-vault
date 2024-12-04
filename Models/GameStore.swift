@@ -24,7 +24,7 @@ class GameStore: ObservableObject {
                 "ordering": "-rating",
                 "page_size": "20",
                 "metacritic": "80,100", //high-rated games
-                "dates": "2023-01-01,2024-12-31", //recent games
+                "dates": "01-01-2023,12-31-2024", //recent games
                 "exclude_additions": "true", //no DLC
                 "parent_platforms": "1,2,3,7" //PC, PlayStation, Xbox, Nintendo
             ]

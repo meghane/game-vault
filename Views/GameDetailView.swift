@@ -41,7 +41,7 @@ struct GameDetailView: View {
                     HStack {
                         Image(systemName: "calendar")
                             .foregroundColor(.gray)
-                        Text("Released: \(released)")
+                        Text("Released: \(formatDate(released))")
                             .foregroundColor(.secondary)
                     }
                 }
@@ -106,7 +106,7 @@ struct GameDetailView: View {
                                 .foregroundColor(favoritesManager.isFavorite(gameId: String(gameId)) ? .black : .black)
                         }
                         
-                        //share button
+                        // Share button
                         Button(action: {
                             shareGameInfo()
                         }) {
@@ -136,6 +136,16 @@ struct GameDetailView: View {
         }
     }
     
+    private func formatDate(_ dateString: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" //input format
+        if let date = dateFormatter.date(from: dateString) {
+            dateFormatter.dateFormat = "MM-dd-yyyy" //output format
+            return dateFormatter.string(from: date)
+        }
+        return dateString //return original if parsing fails
+    }
+    
     private func shareGameInfo() {
         guard let gameDetails = viewModel.gameDetails else { return }
         
@@ -147,10 +157,12 @@ struct GameDetailView: View {
         
         let activityVC = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
         
-        //present the activity view controller
+        // Present the activity view controller
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootViewController = windowScene.windows.first?.rootViewController {
             rootViewController.present(activityVC, animated: true, completion: nil)
         }
     }
 }
+
+
