@@ -145,13 +145,27 @@ Build Sprint 2:
 
 ### Models
 
-[Model Name, e.g., User]
+[User]
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
-| username | String | unique id for the user post (default field)   |
-| password | String | user's password for login authentication      |
-| ...      | ...    | ...                          
+| firstName | String | user's first name |
+| lastName | String | user's last name |
+| email | String | user's email address |    
+| password | String | user's password for login authentication |
+| favorites | Array | list of game IDs the user has marked as favorite |
 
+[Game]
+| Property | Type   | Description                                  |
+|----------|--------|----------------------------------------------|
+| id | Int | unique identifier for the game |
+| name | String | name of the game |
+| description | String | description of the game |    
+| backgroundImage | String | URL of the game's background image |
+| released | String | release date of the game in "MM-DD-YYYY" format |
+| rating | Double | average rating of the game |
+| platforms | Array | list of platforms the game is available on |    
+| developers | Array | list of developers who created the game |
+| website | String | official website link for the game |
 
 ### Networking
 
