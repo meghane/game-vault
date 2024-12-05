@@ -41,8 +41,8 @@ Original App Design Project - README
 
 - [X]  User can see recommendations based on previous filters and/or searches
 - [X]  User can see trending games
-- [ ]  User can watch trailers for a selected game
-- [ ]  User can share game details with others via a share button
+- [X]  User can visit website for selected game
+- [X]  User can share game details with others via a share button
 - [ ]  User can view and select their recent searches on the search screen
 
 ### 2. Screen Archetypes
@@ -125,15 +125,20 @@ Original App Design Project - README
 
 ### Digital Wireframes & Mockups
 
-![](https://github.com/FAU-Fall2024-iOS-Mobile-App/final-project-meghane/blob/main/gamevaultwireframe.png)
+<img src="Wireframe/gamevaultwireframe.png" width=500 height=600>
 
 ### Interactive Prototype
 
-![](https://github.com/FAU-Fall2024-iOS-Mobile-App/final-project-meghane/blob/main/interactiveprototype.gif)
+<img src="Wireframe/interactiveprototype.gif" width=400 height=600>
 
 ## Build Progress
 
-![](https://github.com/FAU-Fall2024-iOS-Mobile-App/final-project-meghane/blob/main/buildsprint1.gif)
+Build Sprint 1:
+<img src="BuildSprintGIF/buildsprint1.gif" width=300 height=500>
+
+Build Sprint 2:
+<img src="BuildSprintGIF/buildsprint2.gif" width=300 height=500>
+
 
 ## Schema 
 
