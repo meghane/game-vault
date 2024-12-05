@@ -35,7 +35,7 @@ Original App Design Project - README
 - [X] User can view a list of games based on their selected filters
 - [X] User can see detailed information about a selected game
 - [X] User can "favorite" a game for easy access later
-- [ ] User can search for games by title
+- [X] User can search for games by title
 
 **Optional Nice-to-have Stories**
 
@@ -134,10 +134,14 @@ Original App Design Project - README
 ## Build Progress
 
 Build Sprint 1:
-<img src="BuildSprintGIF/buildsprint1.gif" width=300 height=500>
-
+<img src="BuildSprintGIF/buildsprint1.gif" width=300 height=550>
 Build Sprint 2:
-<img src="BuildSprintGIF/buildsprint2.gif" width=300 height=500>
+<img src="BuildSprintGIF/buildsprint2.gif" width=300 height=550>
+
+## Final App
+
+Final App GIF: 
+<img src="GameVault.gif" width=300 height=550>
 
 
 ## Schema 
@@ -145,7 +149,7 @@ Build Sprint 2:
 
 ### Models
 
-[User]
+**User**
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
 | firstName | String | user's first name |
@@ -154,7 +158,7 @@ Build Sprint 2:
 | password | String | user's password for login authentication |
 | favorites | Array | list of game IDs the user has marked as favorite |
 
-[Game]
+**Game**
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
 | id | Int | unique identifier for the game |
@@ -169,9 +173,17 @@ Build Sprint 2:
 
 ### Networking
 
-- [List of network requests by screen]
-- [Example: `[GET] /users` - to retrieve user data]
-- ...
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+**Authentication**
+- [POST] /users/login - Authenticate user credentials and log in.
+- [POST] /users/signup - Register a new user account.
+- [POST] /users/logout - Log out the current user.
+  
+**Favorites Manager**
+- [GET] /users/{userId}/favorites - Retrieve the list of favorite games for a user.
+- [POST] /users/{userId}/favorites - Add a game to the user's favorites.
+- [DELETE] /users/{userId}/favorites/{gameId} - Remove a game from the user's favorites.
+  
+**RAWG API endpoints**
+- [GET] /games - Get a list of games.
+- [GET] /games/{id} - Get detailed information about a specific game.
+
