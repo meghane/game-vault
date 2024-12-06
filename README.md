@@ -143,6 +143,9 @@ Build Sprint 2:
 Final App GIF: 
 <img src="GameVault.gif" width=300 height=550>
 
+Demo Presentation:
+[![](https://img.youtube.com/vi/kIMPKv5aL_E/0.jpg)](https://youtu.be/kIMPKv5aL_E)
+
 
 ## Schema 
 
