@@ -2,6 +2,7 @@ Original App Design Project - README
 ===
 
 # Game Vault
+### By: Meghan Thomas - Z23651457
 
 ## Table of Contents
 
