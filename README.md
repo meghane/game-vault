@@ -1,5 +1,4 @@
 # Game Vault
-### By: Meghan Thomas
 
 ## Table of Contents
 
