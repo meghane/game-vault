@@ -9,6 +9,7 @@
 4. [Build Progress](#Build-Progress)
 5. [Final App](#Final-App)
 6. [Schema](#Schema)
+7. [API Usage](#API-Usage)
 
 ## Overview
 
@@ -79,7 +80,6 @@
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-
 
 - [Home Symbol] - Home Screen
 - [Magnifying Glass Symbol] - Search Screen
@@ -189,4 +189,9 @@ Demo Presentation:
 **RAWG API endpoints**
 - [GET] /games - Get a list of games.
 - [GET] /games/{id} - Get detailed information about a specific game.
+
+### API Usage
+**About**
+The **RAWG API** is a comprehensive video game database API that provides detailed information about video games across various platforms. It offers data on game titles, genres, platforms, developers, ratings, and more. For more information, visit the [RAWG API Documentation](https://rawg.io/apidocs).
+
 
