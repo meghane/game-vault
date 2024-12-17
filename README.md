@@ -1,15 +1,14 @@
-Original App Design Project - README
-===
-
 # Game Vault
-### By: Meghan Thomas - Z23651457
+### By: Meghan Thomas
 
 ## Table of Contents
 
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
-4. [Schema](#Schema)
+4. [Build Progress](#Build-Progress)
+5. [Final App](#Final-App)
+6. [Schema](#Schema)
 
 ## Overview
 
